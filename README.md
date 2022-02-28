@@ -15,7 +15,7 @@ Database of Pokemon created using MS Access. Includes Forms, Reports, SQL Querie
 ## Queries
  1. **What Pokemon exists in the water gym, and what is its types?**
 	 - This query would be useful to create a strategy against the water gym. If you know exactly which pokemon exist in the gym, you would be able to preemptively make a team which easily counters them.
-```SQL
+	- ```SQL
 SELECT Pokemon.name, Types.type1, Types.type2
 FROM Pokemon, [Gym Leaders], Types
 WHERE [Gym Leaders].partnerName = Pokemon.name
