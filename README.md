@@ -14,14 +14,15 @@ Database of Pokemon created using MS Access. Includes Forms, Reports, SQL Querie
 **![](https://lh5.googleusercontent.com/c3N8IXZK4cWBOdONyriRQgmvvqEBZnTC9_WXQ1XHrKgNd-OnkhTgK8-EIhUEN7bkB0cjr6yarWq1o6la4xwwuHF7ZJBR4qJbIVyR9_Vkgqy9oLW5b_FOM37m2w8wIYY2t14ISfl0OD4)**
 ## Queries
  1. **What Pokemon exists in the water gym, and what is its types?**
-	 - This query would be useful to create a strategy against the water gym. If you know exactly which pokemon exist in the gym, you would be able to preemptively make a team which easily counters them.
-	- ```SQL
+ ```SQL
 SELECT Pokemon.name, Types.type1, Types.type2
 FROM Pokemon, [Gym Leaders], Types
 WHERE [Gym Leaders].partnerName = Pokemon.name
 AND Pokemon.TypeID = Types.ID
 AND [Gym Leaders].ID = 2
 ```
+	 - This query would be useful to create a strategy against the water gym. If you know exactly which pokemon exist in the gym, you would be able to preemptively make a team which easily counters them.
+
 2. **What are the second generation pokemon weak to grass types**
 	- This query is useful to determine if a pokemon weak to grass and fire types exists in a specific generation.
 	- ```SQL
